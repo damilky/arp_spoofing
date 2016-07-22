@@ -40,5 +40,5 @@ print rIP
 print rMAC
 
 while 1:
-    doc(rIP, vIP, rMAC, vMAC)
+    doc(rIP, vIP, vMAC)
     time.sleep(1.5)
